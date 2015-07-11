@@ -6,12 +6,12 @@
   "description": "Quickly add various OSS licenses to your software using the command palette.",
   "activationCommands": [
     "license:MIT",
-    "license:Apache-2․0",
+    "license:Apache-2.0",
     "license:BSD",
-    "license:Artistic-2․0",
+    "license:Artistic-2.0",
     "license:GPL-v2",
     "license:GPL-v3",
-    "license:LGPL-v2․1",
+    "license:LGPL-v2.1",
     "license:LGPL-v3",
     "license:Mozilla",
     "license:The-Unlicense"

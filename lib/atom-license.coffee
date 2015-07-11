@@ -1,12 +1,12 @@
 module.exports =
   activate: ->
-    atom.commands.add "atom-workspace", "license:Apache-2․0", => @apache2()
+    atom.commands.add "atom-workspace", "license:Apache-2.0", => @apache2()
     atom.commands.add "atom-workspace", "license:MIT", => @mit()
     atom.commands.add "atom-workspace", "license:BSD", => @bsd()
-    atom.commands.add "atom-workspace", "license:Artistic-2․0", => @artist2()
+    atom.commands.add "atom-workspace", "license:Artistic-2.0", => @artist2()
     atom.commands.add "atom-workspace", "license:GPL-v2", => @gplv2()
     atom.commands.add "atom-workspace", "license:GPL-v3", => @gplv3()
-    atom.commands.add "atom-workspace", "license:LGPL-v2․1", => @lgplv21()
+    atom.commands.add "atom-workspace", "license:LGPL-v2.1", => @lgplv21()
     atom.commands.add "atom-workspace", "license:LGPL-v3", => @lgplv3()
     atom.commands.add "atom-workspace", "license:Mozilla", => @mozilla()
     atom.commands.add "atom-workspace", "license:The-Unlicense", => @unlicense()
