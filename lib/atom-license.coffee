@@ -1,15 +1,15 @@
 module.exports =
   activate: ->
-    atom.workspaceView.command "license:Apache-2․0", => @apache2()
-    atom.workspaceView.command "license:MIT", => @mit()
-    atom.workspaceView.command "license:BSD", => @bsd()
-    atom.workspaceView.command "license:Artistic-2․0", => @artist2()
-    atom.workspaceView.command "license:GPL-v2", => @gplv2()
-    atom.workspaceView.command "license:GPL-v3", => @gplv3()
-    atom.workspaceView.command "license:LGPL-v2․1", => @lgplv21()
-    atom.workspaceView.command "license:LGPL-v3", => @lgplv3()
-    atom.workspaceView.command "license:Mozilla", => @mozilla()
-    atom.workspaceView.command "license:The-Unlicense", => @unlicense()
+    atom.commands.add "atom-workspace", "license:Apache-2․0", => @apache2()
+    atom.commands.add "atom-workspace", "license:MIT", => @mit()
+    atom.commands.add "atom-workspace", "license:BSD", => @bsd()
+    atom.commands.add "atom-workspace", "license:Artistic-2․0", => @artist2()
+    atom.commands.add "atom-workspace", "license:GPL-v2", => @gplv2()
+    atom.commands.add "atom-workspace", "license:GPL-v3", => @gplv3()
+    atom.commands.add "atom-workspace", "license:LGPL-v2․1", => @lgplv21()
+    atom.commands.add "atom-workspace", "license:LGPL-v3", => @lgplv3()
+    atom.commands.add "atom-workspace", "license:Mozilla", => @mozilla()
+    atom.commands.add "atom-workspace", "license:The-Unlicense", => @unlicense()
 
   mit: ->
     @addLicense("mit")
@@ -41,8 +41,8 @@ module.exports =
   unlicense: ->
     @addLicense("unlicense")
 
-  addLicense: (name)->
-    editor = atom.workspace.activePaneItem
+  addLicense: (name) ->
+    editor = atom.workspace.getActivePaneItem()
     @getLicenseText name, (err, license)->
       editor.insertText(license)
 
